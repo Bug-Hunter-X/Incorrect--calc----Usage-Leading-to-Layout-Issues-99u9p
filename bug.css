@@ -1,0 +1,1 @@
+The CSS property `calc()` is used incorrectly, resulting in unexpected layout or rendering issues.  For example, using `calc(100% - 10px)` within a context where the 100% is not relative to a properly sized parent element will lead to incorrect calculations.
