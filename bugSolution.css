@@ -1,0 +1,16 @@
+The issue is resolved by ensuring the percentage value within the `calc()` function is relative to a properly sized parent container.  If the percentage is relative to the viewport, use `vw` or `vh` units instead.
+
+Here's the corrected CSS in `bugSolution.css`:
+```css
+.container {
+  width: 500px;
+  border: 1px solid black; 
+}
+
+.inner {
+  width: calc(100% - 20px);
+  background-color: lightblue;
+  padding: 10px;  /*This padding is now correctly calculated relative to the container width*/
+}
+```
+The `container` now explicitly defines its width which allows the percentage in `calc()` within `inner` to correctly subtract from the container's width.
